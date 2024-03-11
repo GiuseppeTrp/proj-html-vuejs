@@ -2,11 +2,13 @@
 <script>
 import { store } from './store.js';
 import AppHeaderHero from './components/AppHeaderHero.vue';
+import AppJumbo from './components/AppJumbo.vue';
 
 
 export default {
   components: {
     AppHeaderHero,
+    AppJumbo
   },
   data() 
   {
@@ -21,6 +23,7 @@ export default {
 <template>
   <div id="app">
     <AppHeaderHero></AppHeaderHero>
+    <AppJumbo></AppJumbo>
   </div>
 </template>
 
