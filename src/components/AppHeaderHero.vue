@@ -34,8 +34,8 @@ export default {
                 {{ menuItem.text }}
                 <!-- Un pulsante -->
                 <button  :class="{
-                  'btn btn-outline-warning': menuItem.text === 'Careers',
-                  'btn btn-outline-warning bg-warning text-white border ': menuItem.text !== 'Careers'
+                  'btn btn-outline-warning m-1': menuItem.text === 'Careers',
+                  'btn btn-warning  text-white border-0  m-1': menuItem.text !== 'Careers'
                 }">
                     <!-- Il testo del pulsante varia in base text del link e diventa 'Apply' se è 'Careers', altrimenti 'Get in Touch Now' -->
                     {{ menuItem.text === 'Careers' ? 'Apply' : 'Get in Touch Now' }}
@@ -43,6 +43,28 @@ export default {
             </a>
           </li>
         </ul>
+      </div>
+      <div class="container  d-flex flex-column justify-content-start align-items-start p-2 text-white">
+        <h2>SEM Campagins Made</h2>
+        <h2>Simple With Avada</h2>
+        <p class="text-center w-25 ">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Phasellus eu ornare erat.Curabitur pulvinar elit. 
+        </p>
+        <div class="d-flex gap-4">
+          <button class="btn btn-warning border-0 ">
+            Buy avada now
+  
+  
+          </button>
+          <button class="btn btn-info border-0">
+            Buy avada now
+  
+  
+          </button>
+
+        </div>
+        
+
       </div>
     </nav>
   </header>
