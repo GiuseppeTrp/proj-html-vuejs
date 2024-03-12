@@ -20,7 +20,7 @@ export const store = reactive({
       },
 
       
-      contCard: [
+      jumboCards: [
         {
           icon: "fa fa-solid fa-road fa-lg",
           title: "Establish Goals",
@@ -33,7 +33,32 @@ export const store = reactive({
           icon:"fa fa-solid fa-droplet fa-lg",
           title: "Get Result",
           parag: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit."        }
+      ],
+
+      mainCards:[
+        {
+          icon: "fa fa-brands fa-google fa-lg",
+          title: "Google SEO",
+          parag: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit."},
+        {
+          icon: "fa fa-solid fa-gear fa-lg",
+          title: "Brand Strategy",
+          parag: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit."        },
+        {
+          icon:"fa fa-solid fa-building fa-lg",
+          title: "Local SEO",
+          parag: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit."        },
+        {
+            icon:"fa fa-solid fa-droplet fa-lg",
+            title: "SEO Analysis",
+            parag: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit."        }
+
+
+
       ]
+
+
+
 
 }
 

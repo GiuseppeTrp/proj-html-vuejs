@@ -3,12 +3,14 @@
 import { store } from './store.js';
 import AppHeaderHero from './components/AppHeaderHero.vue';
 import AppJumbo from './components/AppJumbo.vue';
+import AppMain from './components/AppMain.vue';
 
 
 export default {
   components: {
     AppHeaderHero,
-    AppJumbo
+    AppJumbo,
+    AppMain
   },
   data() 
   {
@@ -24,6 +26,7 @@ export default {
   <div id="app">
     <AppHeaderHero></AppHeaderHero>
     <AppJumbo></AppJumbo>
+    <AppMain></AppMain>
   </div>
 </template>
 
