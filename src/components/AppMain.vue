@@ -1,7 +1,15 @@
 <script>
 import { store } from '../store.js';
+import AppOurNews from './AppOurNews.vue';
+import AppOurPlans from './AppOurPlans.vue';
+import AppOurWork from './AppOurWork.vue';
 
 export default {
+    components: {
+    AppOurWork,
+    AppOurPlans,
+    AppOurNews
+  },
   data() {
     return {
       store
@@ -9,6 +17,7 @@ export default {
   },
   // Nome componente
   name: 'AppMain'
+  
 }
 </script>
 
@@ -24,7 +33,7 @@ export default {
             <div class="row  d-flex justify-content-center p-5">
             <!-- Iterazione attraverso le carte -->
                 <div v-for="card  in store.mainCards" class="col-md-3 ">
-                    <div class="card text-white ">
+                    <div class="card text-white see-notch ">
                         <div class="card-header border-bottom-0 ">
                             <i :class=card.icon></i>
                         </div>
@@ -51,6 +60,12 @@ export default {
         </div>
 
     </div>
+    <AppOurWork></AppOurWork>
+    <AppOurPlans></AppOurPlans>
+    <AppOurNews></AppOurNews>
+
+
+
 
 
 
@@ -60,7 +75,7 @@ export default {
 
 <style lang="scss">
 
-.card{
+.see-notch{
     background-color: #091550!important;
 }
 
