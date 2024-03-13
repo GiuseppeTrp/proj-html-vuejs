@@ -25,21 +25,9 @@ export default {
         <div class="container">
             <div class="row d-flex justify-content-center">
             <!-- Iterazione attraverso le carte -->
-                <div v-for="card  in store.jumboCards" class="col-md-3">
+                <div v-for="card  in store.OurNewsCards" class="col-md-3">
                     <div class="card  ">
-                        <div class="card-header border-bottom-0 ">
-                            <i :class=card.icon></i>
-                        </div>
-                        <div class="card-body">
-                        
-                            <h6>{{ card.title }}</h6>
-                            <div class="container">
-                                <p class=" container parag tex-center fw-light fs-small text-center">{{ card.parag }}</p>
-
-
-                            </div>
-                            
-                        </div>
+                        <img :src="card.img" alt="">
                     </div>
                 </div>
 

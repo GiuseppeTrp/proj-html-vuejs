@@ -24,7 +24,7 @@ export default {
 <template>
     <div class="container-fluid d-flex flex-column text-center   blue text-white bGround">
         <div class="pt-5">
-            <h5 class="p-3"> See Our Notch Services</h5>
+            <h3 class="p-3"> See Our Notch Services</h3>
             <p>Sed ut perspicaciatis unde omnis iste natus error sit voluptatem accusantium doloremque laundantium</p>
 
 
@@ -105,5 +105,8 @@ export default {
     background-color: #010c47;
 
 
+}
+button{
+    border-radius: 30px!important;
 }
 </style>

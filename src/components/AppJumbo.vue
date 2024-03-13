@@ -15,8 +15,8 @@ export default {
 <template>
     <div class="container-fluid d-flex flex-column text-center p-3 gray">
       <div>
-        <h5>Meet The New Agency SEO Template</h5>
-        <h5>From The Avada Team</h5>
+        <h3>Meet The New Agency SEO Template</h3>
+        <h3>From The Avada Team</h3>
         <p>Send ut perspicaciatis unde omnis iste natus error sit voluptatem accusantium doloremque laundantium</p>
       </div>
       <div class="container">
