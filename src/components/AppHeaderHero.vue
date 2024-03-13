@@ -27,19 +27,18 @@ export default {
             <!-- Se il text del link è diverso da 'Careers' o 'News'  stampa il text -->
             <a v-if="menuItem.text !== 'Careers' && menuItem.text !== 'News'" class="nav-link">{{ menuItem.text }}</a>
             <!-- Altrimenti -->
-            
-              
             <a v-else class="nav-link">
               <!-- stampa il text con.. -->
-                {{ menuItem.text }}
-                <!-- Un pulsante -->
-                <button  :class="{
+              {{ menuItem.text }}
+              <!-- Un pulsante -->
+              <button 
+                :class="{
                   'btn btn-outline-warning m-1': menuItem.text === 'Careers',
                   'btn btn-warning  text-white border-0  m-1': menuItem.text !== 'Careers'
                 }">
-                    <!-- Il testo del pulsante varia in base text del link e diventa 'Apply' se è 'Careers', altrimenti 'Get in Touch Now' -->
-                    {{ menuItem.text === 'Careers' ? 'Apply' : 'Get in Touch Now' }}
-                </button>
+                <!-- Il testo del pulsante varia in base text del link e diventa 'Apply' se è 'Careers', altrimenti 'Get in Touch Now' -->
+                {{ menuItem.text === 'Careers' ? 'Apply' : 'Get in Touch Now' }}
+              </button>
             </a>
           </li>
         </ul>
@@ -48,23 +47,16 @@ export default {
         <h2>{{ store.contHero.title1 }}</h2>
         <h2>{{ store.contHero.title2 }}</h2>
         <p class="text-center w-25 ">
-           {{ store.contHero.parag }}        
-          </p>
+          {{ store.contHero.parag }}        
+        </p>
         <div class="d-flex gap-4 ">
-          <button class="btn btn-warning border-0  text-white text-uppercase">
+          <button class="btn btn-warning border-0  text-white text-uppercase ">
             {{ store.contHero.button1 }}  
-  
-  
           </button>
           <button class="btn btn-info border-0 text-white text-uppercase">
             {{ store.contHero.button2 }}  
-  
-  
           </button>
-
         </div>
-        
-
       </div>
     </nav>
   </header>
@@ -81,21 +73,17 @@ header {
   min-height: 500px;
 }
 
-
-
-
-
-button{
-
-  font-size: 8px;
-  font-weight: bold;
-
+/* Effetto di hover per i link nella barra di navigazione */
+.nav-link:hover {
+  color: yellow; /* Cambia il colore del testo in giallo quando si passa sopra con il mouse */
+  cursor: pointer;
 }
 
-nav{
-  font-size: 10px;
-
+/* Effetto di hover per i pulsanti */
+button:hover {
+  background-color: yellow; /* Cambia il colore di sfondo del pulsante in giallo quando si passa sopra con il mouse */
+  color: black; /* Cambia il colore del testo in nero quando si passa sopra con il mouse */
+  
 }
-
-
 </style>
+

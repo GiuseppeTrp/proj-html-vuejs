@@ -24,26 +24,38 @@ export default {
             <div class="row d-flex justify-content-center">
             <!-- Iterazione attraverso le carte -->
                 <div v-for="card  in store.OurPlansCards" class="col-md-3">
-                    <div class="card  ">
-                        <div class="card-header border-bottom-0 ">
+                    <div class="card  p-2">
+                        <div class="card-header border-bottom-0 p-2 bg-white title">
                             <h6>{{ card.plane }}</h6>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body container p-0 ">
                         
-                            <h6>{{ card.price }}</h6>
-                            <p>
+                               
+                                <div class="color-price ">
+                                    <p v-html="card.priceHtml" class="p-2"></p>
+
+
+                                </div>
+
+
+                            
+                            <p class="p-3">
                                 {{ card.project }}
                             </p>
-                            <p>
+                            <p class="p-3">
                                 {{ card.storage }}
                             </p>
-                            <p>
+                            <p class="p-3">
                                 {{ card.users }}
                             </p>
-                            <button class="btn btn-warning">
-                                ciao
+                            <div class="button-bg container-fluid p-3">
+                                <button class="btn btn-outline-primary text-uppercase  p-2 fw-bold">
+                                    start today
+    
+                                </button>
 
-                            </button>
+                            </div>
+                           
                             
                             
                         </div>
@@ -63,23 +75,69 @@ export default {
 
 
 <style lang="scss">
+@use '../src/variables' as *;
 
-div i{
-    color: #FFA737;
-}
 
-.parag{
+
+
+  .parag {
     font-size: 12px;
-    
-}
+  }
 
-.our-plans{
+  .our-plans {
     background-image: url(../assets/img/background1.jpg);
+  }
+
+ 
+
+  /* Selettore per ogni elemento p all'interno di .card-body */
+  .card-body i:hover,
+
+  .card-body p:nth-child(1):hover,
+  .card-body p:nth-child(2):hover,
+  .card-body p:nth-child(3):hover,
+  .card-body p:nth-child(4):hover {
+    transform: translateY(-2px); /* Al passaggio del mouse, solleva l'elemento di 2px */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra */
+    background-color: $bgColour ;
+    border-top: 1px solid rgba(0, 0, 0, 0.2); /* Aggiunge un bordo superiore sottile */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Aggiunge un bordo inferiore sottile */
+  }
+
+
+  .price {
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .currency {
+    font-size: 16px;
+    margin-right: 4px;
+  }
+  
+  .integer-part {
+    margin-right: 2px;
+  }
+  
+  .decimal-part {
+    font-size: 16px;
+    position: relative;
+    top: -4px;
+  }
+  
+  .time {
+    font-size: 14px;
+    margin-left: 4px;
+  }
+
+  .color-price {
+    color:$colorPrice!important;
+  }
+.button-bg{
+    background-color: $bgColour;
 }
-
-
-
-
-
-
 </style>

@@ -22,19 +22,19 @@ export default {
 </script>
 
 <template>
-    <div class="container-fluid d-flex flex-column text-center p-3  blue text-white bGround">
-        <div class="p-5">
-            <h5> See Our Notch Services</h5>
+    <div class="container-fluid d-flex flex-column text-center   blue text-white bGround">
+        <div class="pt-5">
+            <h5 class="p-3"> See Our Notch Services</h5>
             <p>Sed ut perspicaciatis unde omnis iste natus error sit voluptatem accusantium doloremque laundantium</p>
 
 
         </div>
-        <div class="container  p-5 mb-5">
+        <div class="container   ">
             <div class="row  d-flex justify-content-center p-5">
             <!-- Iterazione attraverso le carte -->
-                <div v-for="card  in store.mainCards" class="col-md-3 ">
+                <div v-for="card  in store.mainCards" class="col-md-3 p-4">
                     <div class="card text-white see-notch ">
-                        <div class="card-header border-bottom-0 ">
+                        <div class="card-header border-bottom-0 p-3  icon-cont">
                             <i :class=card.icon></i>
                         </div>
                         <div class="card-body">
@@ -80,7 +80,7 @@ export default {
 }
 
 
-div i{
+.icon-cont i{
     color: #FFA737;
 }
 

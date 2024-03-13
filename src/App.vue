@@ -31,6 +31,10 @@ export default {
     <AppMain></AppMain>
     <AppFooter></AppFooter>
   </div>
+  
+
+  
+  
 </template>
 
 

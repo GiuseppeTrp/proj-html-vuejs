@@ -13,68 +13,60 @@ export default {
 </script>
 
 <template>
-    <div class="container-fluid d-flex flex-column text-center p-3 ">
-        <div>
-            <h5> Meet The New Agency SEO Template</h5>
-            <h5>From The Avada Team</h5>
-            <p>Send ut perspicaciatis unde omnis iste natus error sit voluptatem accusantium doloremque laundantium</p>
-
-
-        </div>
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-            <!-- Iterazione attraverso le carte -->
-                <div v-for="card  in store.jumboCards" class="col-md-3">
-                    <div class="card  ">
-                        <div class="card-header border-bottom-0 ">
-                            <i :class=card.icon></i>
-                        </div>
-                        <div class="card-body">
-                        
-                            <h6>{{ card.title }}</h6>
-                            <div class="container">
-                                <p class=" container parag tex-center fw-light fs-small text-center">{{ card.parag }}</p>
-
-
-                            </div>
-                            
-                        </div>
-                    </div>
+    <div class="container-fluid d-flex flex-column text-center p-3 gray">
+      <div>
+        <h5>Meet The New Agency SEO Template</h5>
+        <h5>From The Avada Team</h5>
+        <p>Send ut perspicaciatis unde omnis iste natus error sit voluptatem accusantium doloremque laundantium</p>
+      </div>
+      <div class="container">
+        <div class="row d-flex justify-content-center ">
+          <!-- Iterazione attraverso le carte -->
+          <div v-for="card in store.jumboCards" class="col-md-3 ">
+            <div class="card card-hover ">
+              <div class="card-header border-bottom-0 bg-white icon-cont ">
+                <i :class="card.icon"></i>
+              </div>
+              <div class="card-body">
+                <h6>{{ card.title }}</h6>
+                <div class="container">
+                  <p class="container parag tex-center fw-light fs-small text-center">{{ card.parag }}</p>
                 </div>
-
-                <div class="container bground">
-                    <img src="../assets/img/agency-seo-desk-front-1200x570.jpg" alt="">
-
-                </div>
+              </div>
             </div>
+          </div>
+          <div class="container bground">
+            <img src="../assets/img/agency-seo-desk-front-1200x570.jpg" alt="">
+          </div>
         </div>
-
+      </div>
     </div>
+  </template>
+  
+  <style lang="scss">
+  @use '../src/variables' as *;
 
-
-
-
-</template>
-
-
-<style lang="scss">
-
-div i{
+  .icon-cont i {
     color: #FFA737;
-}
-
-.parag{
+  }
+  
+  .parag {
     font-size: 12px;
-    
-}
+  }
+  
+  .bground img {
+    width: 70%;
+    object-fit: contain;
+  }
+  
+  .card-hover:hover {
+    filter: brightness(120%); /* Aumenta la luminosità del 20% al passaggio del mouse */
+    border: 1px rgb(182, 181, 181) solid;
+    cursor: pointer;
+  }
 
-
-
-.bground img{
-width: 70%;
-
-object-fit: contain;
-}
-
-
-</style>
+  .gray{
+    background-color: $bgColour;
+  }
+  </style>
+  
