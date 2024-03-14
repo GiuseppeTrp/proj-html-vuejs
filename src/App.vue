@@ -14,11 +14,14 @@ export default {
     AppMain,
     AppFooter
   },
-  data() 
-  {
+  data() {
+  return {
+    menuItems: store.menuItems,
+    contHero: store.contHero,
 
     store  
-  }
+  };
+},
 };
 </script>
 
@@ -26,7 +29,7 @@ export default {
 
 <template>
   <div id="app">
-    <AppHeaderHero></AppHeaderHero>
+    <AppHeaderHero :menuItem="menuItems" :contHero="contHero"></AppHeaderHero>
     <AppJumbo></AppJumbo>
     <AppMain></AppMain>
     <AppFooter></AppFooter>

@@ -1,66 +1,56 @@
 <script>
-import { store } from '../store.js';
-
 export default {
-  data() {
-    return {
-      store
+  props: {
+    menuItem: {
+      type: Array,
+    },
+    contHero:{
+      type:Object
     }
   },
-  // Nome componente
-  name: 'AppHeaderHero'
-}
+
+};
 </script>
+
 
 <template>
   <header>
-    <!-- Barra di navigazione -->
     <nav class="navbar container d-flex justify-content-center gap-5">
-      <!-- Logo -->
       <img src="../assets/img/logo_seo_w_1x.png" alt="">
 
       <div class="d-flex ms-5">
-        <!-- Lista dei link -->
-        <ul class="mr-auto navbar gap-3 list-unstyled text-white ">
-          <!-- Itero sui link  -->
-          <li v-for="menuItem in store.menuItems" class="nav-item">
-            <!-- Se il text del link è diverso da 'Careers' o 'News'  stampa il text -->
-            <a v-if="menuItem.text !== 'Careers' && menuItem.text !== 'News'" class="nav-link">{{ menuItem.text }}</a>
-            <!-- Altrimenti -->
+        <ul class="mr-auto navbar gap-3 list-unstyled text-white">
+          <li v-for="(item, index) in menuItem" :key="index" class="nav-item">
+            <a v-if="item.text !== 'Careers' && item.text !== 'News'" class="nav-link">{{ item.text }}</a>
             <a v-else class="nav-link">
-              <!-- stampa il text con.. -->
-              {{ menuItem.text }}
-              <!-- Un pulsante -->
+              {{ item.text }}
               <button 
-                :class="{
-                  'btn btn-outline-warning m-1': menuItem.text === 'Careers',
-                  'btn btn-warning  text-white border-0  m-1': menuItem.text !== 'Careers'
-                }">
-                <!-- Il testo del pulsante varia in base text del link e diventa 'Apply' se è 'Careers', altrimenti 'Get in Touch Now' -->
-                {{ menuItem.text === 'Careers' ? 'Apply' : 'Get in Touch Now' }}
-              </button>
+              :class="{
+                'btn btn-outline-warning m-1': item.text === 'Careers',
+                'btn btn-warning text-white border-0 m-1': item.text !== 'Careers'
+              }">
+              <!-- Il testo del pulsante varia in base al text del link -->
+              {{ item.text === 'Careers' ? 'Apply' : 'Get in Touch Now' }}
+            </button>
             </a>
           </li>
         </ul>
       </div>
-      <div class="container  d-flex flex-column justify-content-start align-items-start p-2 text-white">
-        <h2>{{ store.contHero.title1 }}</h2>
-        <h2>{{ store.contHero.title2 }}</h2>
-        <p class="text-center w-25 ">
-          {{ store.contHero.parag }}        
-        </p>
-        <div class="d-flex gap-4 ">
-          <button class="btn btn-warning border-0  text-white text-uppercase ">
-            {{ store.contHero.button1 }}  
-          </button>
-          <button class="btn btn-info border-0 text-white text-uppercase">
-            {{ store.contHero.button2 }}  
-          </button>
+      <div v-if="contHero" class="container d-flex flex-column justify-content-start align-items-start p-2 text-white">
+        <h2>{{ contHero.title1 }}</h2>
+        <h2>{{ contHero.title2 }}</h2>
+        <p class="text-center w-25">{{ contHero.parag }}</p>
+        <div class="d-flex gap-4">
+          <button class="btn btn-warning border-0 text-white text-uppercase fw-bold">{{ contHero.button1 }}</button>
+          <button class="btn btn-info border-0 text-white text-uppercase fw-bold ">{{ contHero.button2 }}</button>
         </div>
       </div>
     </nav>
   </header>
 </template>
+
+
+
 
 <style lang="scss" scoped>
 /* Stili per il componente, se necessario */
@@ -78,7 +68,4 @@ header {
   color: yellow; /* Cambia il colore del testo in giallo quando si passa sopra con il mouse */
   cursor: pointer;
 }
-
-
 </style>
-
