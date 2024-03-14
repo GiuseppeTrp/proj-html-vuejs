@@ -18,7 +18,7 @@ export default {
 <template>
   <div class="container p-5">
     <div class="text-center container p-3">
-      <h3>I nostri lavori</h3>
+      <h3>Our Works</h3>
       <p>Invia ut perspicaciatis unde omnis iste natus error sit voluptatem accusantium doloremque laundantium</p>
     </div>
 
@@ -34,7 +34,7 @@ export default {
       </div>
     </div>
     <div class="d-flex justify-content-center">
-      <button class="btn btn-warning text-uppercase fw-bold text-white">Vedi i nostri lavori</button>
+      <button class="btn btn-warning text-uppercase fw-bold text-white">see our works</button>
     </div>
   </div>
 </template>
