@@ -8,13 +8,9 @@ export default {
     }
   },
   name: 'AppFooter',
-  methods: {
-    initCarousel() {
-      var carousel = new bootstrap.Carousel(document.getElementById('testimonials-slider'));
-    }
-  },
   mounted() {
-    this.initCarousel();
+    const sliderElement = document.getElementById("testimonials-slider");
+    sliderElement.querySelector(".carousel-item:first-child img").classList.add("active");
   }
 }
 </script>
@@ -40,25 +36,18 @@ export default {
             <div class="d-flex justify-content-center">
               <img class="border rounded-circle d-flex align" src="../assets/img/testimonials-2.jpg" alt="">
             </div>
-            <p>Another testimonial goes here...</p>
+            <p>Good experience, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto assumenda nostrum enim! Non perferendis temporibus accusantium laudantium? Qui placeat, ut tenetur, deserunt natus numquam accusantium illo consequatur odio harum porro!</p>
+
             <p class="mb-0">
               <a href="#!" class="link-dark text-decoration-none fw-bold">John Doe,</a>
               <a href="" class="link-dark text-decoration-none text-uppercase">XYZ Company</a>
             </p>
           </div>
-          <!-- Add more carousel items as needed -->
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#testimonials-slider" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#testimonials-slider" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-        <div class="testimonial-pagination" id="fusion-testimonials-1">
-          <a href="#" aria-label="Testimonial Pagination" class="activeSlide"></a>
-          <a href="#" aria-label="Testimonial Pagination"></a>
+       
+        <div class="testimonial-pagination d-flex justify-content-center" id="fusion-testimonials-1">
+          <a href="#testimonials-slider" data-bs-slide-to="0" class="activeSlide border border-black"></a>
+          <a href="#testimonials-slider" data-bs-slide-to="1" class="border border-black "></a>
         </div>
       </div>
       <hr>
@@ -66,66 +55,91 @@ export default {
         <img v-for="image in store.footerItem" :src="image.img" alt="SEO CTA">
       </div>
     </div>
-    <div class="p-5 consulation">
+
+    <div class="consulation">
+      <div class="overlay"></div> <!-- Sovrapposizione per il velo scuro -->
       <div class="container-fluid d-flex flex-column text-center p-5">
-        <div class="p-5">
+        <div class="p-5 text-white consulation-text">
           <h4 class>Start Your Free Consultation</h4>
           <p>Sed ut perspicatics unde omnis iste natus error sit voluptatem accusantium doloremque laundantium</p>
-          <button class="btn btn-warning">ciao</button>
+          <button class="btn btn-warning text-uppercase text-white fw-bold btn-consulation">Contact us now</button>
         </div>
       </div>
     </div>
     <div class="foot">
-      <div class="d-flex justify-content-center p-5 justify-content-center">
-        <img src="../assets/img/logo_seo_w_1x.png" alt="">
-      </div>
-      <div class="d-flex ms-5 justify-content-center">
-        <!-- Lista dei link -->
-        <ul class="mr-auto navbar gap-3 list-unstyled text-dark">
-          <!-- Itero sui link -->
-          <li v-for="menuItem in store.menuItems" class="nav-item">
-            <!-- Se il text del link è diverso da 'Careers' o 'News' stampa il text -->
-            <a v-if="menuItem.text !== 'Careers' && menuItem.text !== 'News'" class="nav-link">{{ menuItem.text }}</a>
-            <!-- Altrimenti -->
-            <a v-else class="nav-link">
-              <!-- stampa il text con.. -->
-              {{ menuItem.text }}
-              <!-- Un pulsante -->
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <p>&copy; 2012-{{ currentYear }} Your Company | Avada Theme by ThemeFusion | All Rights Reserved | Powered by WordPress</p>
+      <div >
+        <div class="d-flex justify-content-center p-5 justify-content-center">
+          <img  src="../assets/img/logo_seo_1x.png" alt="">
         </div>
-        <div class="col-md-6 text-md-end text-secondary">
-          <a href="#"><i class="fa-brands fa-facebook "></i></a>
-          <a href="#"><i class="fa-brand fa-instagram "></i></a>
-          <a href="#"><i class="fa-brands fa-twitter "></i></a>
-          <a href="#"><i class="fa-brands fa-youtube "></i></a>
+        <div class="d-flex ms-5 justify-content-center">
+          <!-- Lista dei link -->
+          <ul class="mr-auto navbar gap-3 list-unstyled text-dark">
+            <!-- Itero sui link -->
+            <li v-for="menuItem in store.menuItems" class="nav-item">
+              <!-- Se il testo del link è diverso da 'Careers' o 'News', stampa il testo -->
+              <a v-if="menuItem.text !== 'Careers' && menuItem.text !== 'News'" class="nav-link">{{ menuItem.text }}</a>
+              <!-- Altrimenti -->
+              <a v-else class="nav-link">
+                <!-- Stampa il testo con.. -->
+                {{ menuItem.text }}
+                <!-- Un pulsante -->
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
+  
+      <div class="container p-5">
+        <div class="row">
+          <div class="fusion-text fusion-text-10 fusion-text-no-margin" >
+            <p>© Copyright 2012 - 2024 | 
+              <a href="">Avada Website Builder</a> 
+              by <a href="" >ThemeFusion</a> 
+              | All Rights Reserved  |  Powered by 
+              <a href="http://wordpress.org" >WordPress</a></p>
+          </div>
+          <div class=" text-secondary d-flex gap-4 justify-content-center">
+            <a href="#"><i class="fa fa-solid fa-building fa-lg"></i></a>
+            <a href="#"><i class="fa fa-solid fa-building fa-lg"></i></a>
+            <a href="#"><i class="fa fa-solid fa-building fa-lg"></i></a>
+            <a href="#"><i class="fa fa-solid fa-building fa-lg"></i></a>
+          </div>
+        </div>
+      </div>
+
     </div>
+
+    
   </div>
 </template>
 
 <style lang="scss">
+@use '../src/variables' as *;
+
 .clients img {
   width: 100px;
 }
 
 .consulation {
+  position: relative;
   background-image: url('../assets/img/CTA-seo-1.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Colore scuro semi-trasparente */
+  z-index: 1; /* Imposta il valore z-index per far sovrapporre l'overlay all'immagine di sfondo */
+}
+
 .foot {
-  background-color: rgb(239, 237, 237);
+  background-color: #F8F8F8;
 }
 
 .testimonial-pagination {
@@ -144,6 +158,14 @@ export default {
 }
 
 .testimonial-pagination a.activeSlide {
-  background-color: rgba(255, 255, 255, 1); /* Colore del pallino attivo */
+  background-color: black; /* Colore del pallino attivo */
+}
+
+.consulation-text {
+  z-index: 10;
+}
+
+.carousel-item{
+  background-color: white;
 }
 </style>

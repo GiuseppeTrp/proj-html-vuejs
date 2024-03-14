@@ -79,11 +79,6 @@ header {
   cursor: pointer;
 }
 
-/* Effetto di hover per i pulsanti */
-button:hover {
-  background-color: yellow; /* Cambia il colore di sfondo del pulsante in giallo quando si passa sopra con il mouse */
-  color: black; /* Cambia il colore del testo in nero quando si passa sopra con il mouse */
-  
-}
+
 </style>
 
