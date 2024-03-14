@@ -17,7 +17,7 @@ export default {
 <template>
     <div class="container-fluid d-flex flex-column text-center p-5 our-news">
       <div>
-        <h5>Our News</h5>
+        <h3>Our News</h3>
         <p>Send ut perspicaciatis unde omnis iste natus error sit voluptatem accusantium doloremque laundantium</p>
       </div>
       <div class="container-fluid">
@@ -27,9 +27,9 @@ export default {
               <img :src="card.img" alt="" />
             </div>
             <div class="container">
-              <h4 class="title fw-bold text-center text-ellipsis">
+              <h3 class="title fw-bold text-center text-ellipsis">
                 {{ card.title }}
-              </h4>
+              </h3>
             </div>
             <div>
               <p class="text-secondary">{{ card.date }}</p>

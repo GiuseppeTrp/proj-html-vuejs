@@ -20,11 +20,11 @@ export default {
         <p>Send ut perspicaciatis unde omnis iste natus error sit voluptatem accusantium doloremque laundantium</p>
       </div>
       <div class="container">
-        <div class="row d-flex justify-content-center ">
+        <div class="row d-flex justify-content-center">
           <!-- Iterazione attraverso le carte -->
           <div v-for="card in store.jumboCards" class="col-md-3 ">
-            <div class="card card-hover ">
-              <div class="card-header border-bottom-0 bg-white icon-cont ">
+            <div class="card card-jumbo ">
+              <div class="card-header border-bottom-0 bg-white icon-cont p-3 ">
                 <i :class="card.icon"></i>
               </div>
               <div class="card-body">
@@ -59,10 +59,17 @@ export default {
     object-fit: contain;
   }
   
-  .card-hover:hover {
-    filter: brightness(120%); /* Aumenta la luminosità del 20% al passaggio del mouse */
+  .card-jumbo:hover {
+    filter: brightness(110%); /* Aumenta la luminosità del 20% al passaggio del mouse */
     border: 1px rgb(182, 181, 181) solid;
     cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Aggiunge un'ombra con rilievo */
+
+   
+
+  }
+  .card-jumbo p:hover{
+    font-weight: bold!important;
   }
 
   .gray{

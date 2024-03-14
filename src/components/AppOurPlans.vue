@@ -15,7 +15,7 @@ export default {
 <template>
     <div class="container-fluid d-flex flex-column text-center p-3  our-plans">
         <div class="text-white">
-            <h5> Our Plans</h5>
+            <h3> Our Plans</h3>
             <p>Send ut perspicaciatis unde omnis iste natus error sit voluptatem accusantium doloremque laundantium</p>
 
 
@@ -28,7 +28,7 @@ export default {
                         <div class="card-header border-bottom-0 p-2 bg-white title">
                             <h6>{{ card.plane }}</h6>
                         </div>
-                        <div class="card-body container p-0 ">
+                        <div class="card-body hover container p-0 ">
                         
                                
                                 <div class="color-price ">
@@ -91,12 +91,12 @@ export default {
  
 
   /* Selettore per ogni elemento p all'interno di .card-body */
-  .card-body i:hover,
+  .card-body.hover i:hover,
 
-  .card-body p:nth-child(1):hover,
-  .card-body p:nth-child(2):hover,
-  .card-body p:nth-child(3):hover,
-  .card-body p:nth-child(4):hover {
+  .card-body.hover p:nth-child(1):hover,
+  .card-body.hover p:nth-child(2):hover,
+  .card-body.hover p:nth-child(3):hover,
+  .card-body.hover p:nth-child(4):hover {
     transform: translateY(-2px); /* Al passaggio del mouse, solleva l'elemento di 2px */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra */
     background-color: $bgColour ;

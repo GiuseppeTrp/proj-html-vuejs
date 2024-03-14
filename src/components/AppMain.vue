@@ -32,7 +32,7 @@ export default {
         <div class="container   ">
             <div class="row  d-flex justify-content-center p-5">
             <!-- Iterazione attraverso le carte -->
-                <div v-for="card  in store.mainCards" class="col-md-3 p-4">
+                <div v-for="card  in store.mainCards" class="col-md-3 py-2 hover-see rounded">
                     <div class="card text-white see-notch ">
                         <div class="card-header border-bottom-0 p-3  icon-cont">
                             <i :class=card.icon></i>
@@ -41,11 +41,11 @@ export default {
                         
                             <h6>{{ card.title }}</h6>
                             <div class="container">
-                                <p class=" container parag tex-center fw-light fs-small text-center">{{ card.parag }}</p>
+                                <p class=" container parag-hover tex-center fw-light fs-small text-center">{{ card.parag }}</p>
 
 
                             </div>
-                            <a class="text-warning">
+                            <a class="text-warning read">
                                 Read More
                             </a>
                             
@@ -84,9 +84,18 @@ export default {
     color: #FFA737;
 }
 
-.parag{
-    font-size: 12px;
+.card.see-notch:hover{
+ 
+    box-shadow: 0cap 0px 20px #001061; /* Adjust for a darker shadow */
+    border: 1px solid #01082b;
+
+
     
+}
+
+.hover-see:hover{
+
+    box-shadow: 0px 0px 10px #556EED; /* Aggiunge un'ombra con rilievo */
 }
 
 
@@ -106,7 +115,9 @@ export default {
 
 
 }
-button{
-    border-radius: 30px!important;
+
+.read{
+    cursor:pointer;
+    list-style:none!important;
 }
 </style>

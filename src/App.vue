@@ -18,6 +18,7 @@ export default {
   return {
     menuItems: store.menuItems,
     contHero: store.contHero,
+    footerItem: store.footerItem,
 
     store  
   };
@@ -32,7 +33,7 @@ export default {
     <AppHeaderHero :menuItem="menuItems" :contHero="contHero"></AppHeaderHero>
     <AppJumbo></AppJumbo>
     <AppMain></AppMain>
-    <AppFooter></AppFooter>
+    <AppFooter :footerItem="footerItem"></AppFooter>
   </div>
   
 
@@ -43,4 +44,14 @@ export default {
 
 
 <style lang="scss">
+button{
+  height: 35px;
+  border-radius: 30px!important;
+  font-size: 12px!important;
+
+}
+
+h4, h3, h5, h6{
+  font-weight: bold!important;
+}
 </style>

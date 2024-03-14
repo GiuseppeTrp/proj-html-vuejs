@@ -36,7 +36,7 @@ export const store = reactive({
       parag: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit."
     },
     {
-      icon: "fa fa-solid fa-droplet fa-lg",
+      icon: " fa fa-tint fa-lg",
       title: "Get Result",
       parag: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit."
     }
@@ -109,15 +109,6 @@ export const store = reactive({
       priceHtml:'<div class="price price-with-decimal color-price"><span class="currency">$</span><span class="integer-part">59</span><sup class="decimal-part">99</sup><span class="time">monthly</span></div>'
     }
   ],
-
-  footerItem:[
-    { img:"/src/assets/img/clients_partner_5-200x202.png" },
-    { img:"/src/assets/img/clients_partner_6-200x202.png"  },
-    { img:"/src/assets/img/clients_partner_1-200x202.png"},
-    { img:"/src/assets/img/clients_partner_2-200x202.png" }
-   
-   
-  ],
   OurNewsCards: [
     { img:'../src/assets/img/related-service-2-320x202.jpg',
       title: 'Why You Need A SEO Agency Now',
@@ -134,9 +125,40 @@ export const store = reactive({
   title: 'Image Optimization For Your Site',
   date: "November 1st, 2017",
   parag: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis distinctio labore repellat quis iste consequatur minus laboriosam, provident unde consectetur eum reprehenderit. Dolores modi et similique, hic asperiores delectus harum"
-},
+  },
   
+   ],
+
+  ClientSays:[
+    { img:"/src/assets/img/clients_partner_5-200x202.png" },
+    { img:"/src/assets/img/clients_partner_6-200x202.png"  },
+    { img:"/src/assets/img/clients_partner_1-200x202.png"},
+    { img:"/src/assets/img/clients_partner_2-200x202.png" },
+    { img:"/src/assets/img/clients_partner_3-200x202.png" },
+    { img:"/src/assets/img/clients_partner_4-200x202.png" },
+
+
+   
+   
   ],
+
+ footerItem:
+  [
+    { text: 'Home' },
+    { text: 'Who we are' },
+    { text: 'What we do' },
+    { text: 'Where we work' },
+    { text: 'Careers' },
+    { text: 'News' },
+    { text: 'Get in Touch Now' }
+  ]
+ 
+    
+
+  
+
+
+ 
 
 });
 
