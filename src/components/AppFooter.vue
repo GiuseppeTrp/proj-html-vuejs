@@ -113,11 +113,8 @@ export default {
             </p>
           </div>
           <!-- Icone aggiuntive -->
-          <div class=" text-secondary d-flex gap-4 justify-content-center">
-            <a href="#"><i class="fa fa-solid fa-building fa-lg"></i></a>
-            <a href="#"><i class="fa fa-solid fa-building fa-lg"></i></a>
-            <a href="#"><i class="fa fa-solid fa-building fa-lg"></i></a>
-            <a href="#"><i class="fa fa-solid fa-building fa-lg"></i></a>
+          <div  class="text-secondary d-flex gap-4 justify-content-center foot-icon">
+            <a v-for="item in store.footerIcon" :href="item.link" > <i :class=item.icon ></i></a>
           </div>
         </div>
       </div>
@@ -179,6 +176,10 @@ export default {
 
 .carousel-item{
   background-color: white;
+}
+
+.foot-icon I{
+  color:#5D5F64
 }
 
 </style>

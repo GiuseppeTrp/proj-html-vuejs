@@ -151,7 +151,31 @@ export const store = reactive({
     { text: 'Careers' },
     { text: 'News' },
     { text: 'Get in Touch Now' }
+  ],
+
+
+  footerIcon:[
+    {icon:"fab fa-facebook fa-lg",
+      link:"https://www.facebook.com/?locale=it_IT"},
+
+    {icon:"fab fa-instagram fa-lg",
+    link:"https://www.instagram.com/"},
+    {icon:"fab fa-twitter fa-lg",
+    link:"https://twitter.com/i/flow/login"},
+    {icon:"fab fa-youtube fa-lg",
+    link:"https://www.youtube.com/?hl=it&gl=IT"},
+
+
+
+
+
+
+  
+  
   ]
+
+
+
  
     
 
