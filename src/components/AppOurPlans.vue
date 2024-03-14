@@ -26,13 +26,13 @@ export default {
                 <div v-for="card  in store.OurPlansCards" class="col-md-3">
                     <div class="card  p-2">
                         <div class="card-header border-bottom-0 p-2 bg-white title">
-                            <h6>{{ card.plane }}</h6>
+                            <h4>{{ card.plane }}</h4>
                         </div>
                         <div class="card-body hover container p-0 ">
                         
                                
                                 <div class="color-price ">
-                                    <p v-html="card.priceHtml" class="p-2"></p>
+                                    <p v-html="card.priceHtml" ></p>
 
 
                                 </div>
@@ -135,9 +135,16 @@ export default {
   }
 
   .color-price {
-    color:$colorPrice!important;
+    color:$colorPrice;
+    font-size:50px;
   }
 .button-bg{
     background-color: $bgColour;
+}
+
+.title h4{
+  color:$colorPrice;
+
+
 }
 </style>
